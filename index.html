@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ModelSovereignty.com — Strategic digital asset (AI sovereignty & governance)</title>
+
+  <meta name="description" content="ModelSovereignty.com is an independent strategic digital asset designed as a neutral banner for the concept of model sovereignty: the capacity of States, institutions and industrial coalitions to control the training, deployment and alignment of their AI models under their own jurisdiction." />
+
+  <link rel="canonical" href="https://www.modelsovereignty.com/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Model Sovereignty — Strategic digital asset" />
+  <meta property="og:description" content="Neutral banner for the emerging concept of model sovereignty in AI: who controls the weights, the inference and the alignment of foundational models." />
+  <meta property="og:url" content="https://www.modelsovereignty.com/" />
+  <meta property="og:image" content="https://www.modelsovereignty.com/og.jpg" />
+
+  <style>
+    :root {
+      --bg: #061626;
+      --card-bg: #0b2238;
+      --accent: #2e8efb;
+      --text-main: #e5ecf5;
+      --text-muted: #9aa7ba;
+      --border-subtle: #1a3148;
+      --danger: #f5b7b1;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #0d2845 0, var(--bg) 55%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 960px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+      border-radius: 24px;
+      padding: 32px 28px 28px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 26px 60px rgba(0,0,0,0.65);
+      backdrop-filter: blur(18px);
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .logo-wrapper {
+      width: 88px;
+      height: 88px;
+      border-radius: 24px;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12), transparent 55%);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .logo-wrapper img {
+      max-width: 70%;
+      height: auto;
+      display: block;
+    }
+
+    .title-block h1 {
+      margin: 0 0 4px;
+      font-size: 1.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .title-block p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      max-width: 520px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 10px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 0 0 10px 1.1rem;
+      padding: 0;
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .pillar {
+      border-radius: 14px;
+      padding: 10px 11px;
+      background: rgba(4, 19, 34, 0.85);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .pillar h3 {
+      margin: 0 0 4px;
+      font-size: 0.9rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+    }
+
+    .pillar p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding-top: 14px;
+      margin-top: 10px;
+      border-top: 1px dashed rgba(255,255,255,0.12);
+    }
+
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: radial-gradient(circle at 0 0, rgba(255,255,255,0.15), rgba(0,0,0,0.1));
+      color: #f6fbff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+    }
+
+    .cta-primary span {
+      margin-left: 7px;
+      font-size: 0.9rem;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    .cta-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: 460px;
+    }
+
+    .disclaimer {
+      margin-top: 18px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      border: 1px solid rgba(245, 183, 177, 0.4);
+      background: rgba(40, 7, 7, 0.7);
+      color: var(--danger);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 780px) {
+      .card {
+        padding: 24px 18px 20px;
+        border-radius: 18px;
+      }
+      .header {
+        flex-direction: row;
+        align-items: center;
+      }
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+      <header class="header">
+        <div class="logo-wrapper" aria-hidden="true">
+          <img src="/logo-modelsovereignty.png" alt="Model Sovereignty logo" loading="lazy" />
+        </div>
+        <div class="title-block">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Strategic Digital Asset · AI Sovereignty</span>
+          </div>
+          <h1>Model Sovereignty</h1>
+          <p>
+            A neutral, category-defining banner for the emerging concept of model sovereignty:
+            who controls the weights, the inference and the alignment of foundational AI models.
+          </p>
+        </div>
+      </header>
+
+      <section class="grid" aria-label="Context and strategic pillars">
+        <div>
+          <div class="section-title">Concept &amp; context</div>
+          <h2>Defining the borders of AI in a fragmented world.</h2>
+          <p>
+            <strong>Model sovereignty</strong> refers to the strategic capacity of a nation,
+            institution or industrial coalition to design, train, deploy and align its
+            foundational AI models under its own jurisdiction &mdash; rather than depending
+            entirely on foreign platforms.
+          </p>
+          <p>
+            In the 2025–2035 horizon, the question is no longer only
+            <em>“Where is my cloud?”</em> but
+            <em>“Who really controls my models, their behaviour and their failure modes?”</em>
+          </p>
+          <p>
+            <strong>ModelSovereignty.com</strong> is an independent digital asset positioned
+            as a potential banner for initiatives in:
+          </p>
+          <ul>
+            <li>sovereign LLM and AI strategy,</li>
+            <li>defence, aerospace and critical infrastructure,</li>
+            <li>AI governance, red-teaming and model risk management.</li>
+          </ul>
+        </div>
+
+        <aside>
+          <div class="section-title">Three strategic pillars</div>
+          <div class="pillars">
+            <div class="pillar">
+              <h3>Jurisdictional control</h3>
+              <p>
+                Where do the model weights reside? Under which laws? Who can compel
+                access to them in a crisis or dispute?
+              </p>
+            </div>
+            <div class="pillar">
+              <h3>Inference security</h3>
+              <p>
+                Who holds the encryption keys and controls inference pipelines, telemetry
+                and resilience under adverse conditions?
+              </p>
+            </div>
+            <div class="pillar">
+              <h3>Alignment autonomy</h3>
+              <p>
+                Who defines the norms, refusal policies and guardrails that govern what
+                the model will and will not do?
+              </p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section aria-label="About the asset">
+        <div class="section-title">About the asset</div>
+        <p>
+          ModelSovereignty.com is not a government agency, regulator, law firm or cloud provider.
+          It is a <strong>strategic naming asset</strong> that could be integrated into a
+          sovereign AI initiative, an industrial alliance or an independent observatory,
+          at the discretion and under the sole responsibility of its future owner.
+        </p>
+        <p>
+          Any potential transfer would concern the <strong>domain name only</strong>. No policy
+          mandate, legal authority, advisory service or technical infrastructure is included.
+        </p>
+
+        <div class="cta-row">
+          <a class="cta-primary" href="mailto:contact@modelsovereignty.com?subject=ModelSovereignty.com%20-%20Acquisition%20inquiry">
+            Contact regarding asset acquisition
+            <span>↗</span>
+          </a>
+          <div class="cta-meta">
+            Professional and institutional inquiries only.
+            No pricing is provided on first contact; please outline your organisation
+            and intended strategic use case.
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Disclaimer.</strong>
+          ModelSovereignty.com is an independent digital asset and concept.
+          It is not affiliated with any government, State agency, regulator, international
+          organisation or defence structure, and does not provide legal, regulatory, tax,
+          defence or national security advice. The term “model sovereignty” is used as a
+          descriptive concept only. No guarantee of valuation, transaction or outcome is given.
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          © <span id="year"></span> ModelSovereignty.com · Independent strategic digital asset.
+        </div>
+        <div>
+          Contact: <a href="mailto:contact@modelsovereignty.com">contact@modelsovereignty.com</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
