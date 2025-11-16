@@ -1,404 +1,407 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ModelSovereignty.com — Strategic digital asset (AI sovereignty & governance)</title>
+  <title>ModelSovereignty.com — Actif stratégique « IA & souveraineté des modèles »</title>
+  <meta name="description" content="ModelSovereignty.com — actif numérique descriptif pour l’ère de la souveraineté des modèles : qui contrôle les poids, les pipelines d’entraînement et d’inférence, et l’alignement des modèles d’IA. Nom de bannière disponible à l’acquisition (États, coalitions public–privé, industriels stratégiques)." />
 
-  <meta name="description" content="ModelSovereignty.com is an independent strategic digital asset designed as a neutral banner for the concept of model sovereignty: the capacity of States, institutions and industrial coalitions to control the training, deployment and alignment of their AI models under their own jurisdiction." />
-
+  <!-- Canonical & hreflang -->
   <link rel="canonical" href="https://www.modelsovereignty.com/" />
-  <meta name="robots" content="index,follow" />
+  <link rel="alternate" href="https://www.modelsovereignty.com/" hreflang="fr" />
+  <link rel="alternate" href="https://www.modelsovereignty.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.modelsovereignty.com/" hreflang="x-default" />
+  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <!-- Open Graph / social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Model Sovereignty — Strategic digital asset" />
-  <meta property="og:description" content="Neutral banner for the emerging concept of model sovereignty in AI: who controls the weights, the inference and the alignment of foundational models." />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="ModelSovereignty.com — Banner for AI model sovereignty" />
+  <meta property="og:description" content="Descriptive .com domain for the emerging concept of model sovereignty: who controls the weights, the inference pipelines and the alignment of foundational AI models. Premium digital asset available for strategic acquisition." />
   <meta property="og:url" content="https://www.modelsovereignty.com/" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.modelsovereignty.com/og.jpg" />
+  <meta property="og:image:alt" content="ModelSovereignty.com — strategic digital asset for AI sovereignty" />
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.modelsovereignty.com/og.jpg" />
+
+  <!-- Icons & preload -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/logo-modelsovereignty.png" imagesizes="260px" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ModelSovereignty.com",
+    "url": "https://www.modelsovereignty.com/",
+    "inLanguage": ["fr-FR","en-GB","en-US"],
+    "description": "Descriptive digital asset for AI model sovereignty: who controls the weights, inference pipelines and alignment of foundational AI models.",
+    "sameAs": ["https://www.linkedin.com/company/modelsovereignty"],
+    "potentialAction": {
+      "@type": "CommunicateAction",
+      "target": "mailto:contact@modelsovereignty.com"
+    }
+  }
+  </script>
+
+  <!-- Styles (identiques à WaterSolvency) -->
   <style>
-    :root {
-      --bg: #061626;
-      --card-bg: #0b2238;
-      --accent: #2e8efb;
-      --text-main: #e5ecf5;
-      --text-muted: #9aa7ba;
-      --border-subtle: #1a3148;
-      --danger: #f5b7b1;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    :root{
+      --bg:#020815;
+      --card:#081120;
+      --muted:#8791b0;
+      --text:#e8eefc;
+      --accent:#7fd0ff;
+      --chip:#101b34;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --radius:18px
     }
-
-    * {
-      box-sizing: border-box;
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif
     }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-main);
-      background: radial-gradient(circle at top, #0d2845 0, var(--bg) 55%);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin:8px 0 22px
     }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 16px;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--chip);
+      border:1px solid #1d2946;
+      border-radius:999px;
+      padding:6px 12px;
+      color:#c1ccec;
+      font-size:13px
     }
-
-    .card {
-      width: 100%;
-      max-width: 960px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
-      border-radius: 24px;
-      padding: 32px 28px 28px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 26px 60px rgba(0,0,0,0.65);
-      backdrop-filter: blur(18px);
+    .lang{
+      gap:10px;
+      display:flex;
+      align-items:center
     }
-
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 24px;
+    .lang button{
+      background:var(--chip);
+      color:var(--text);
+      border:1px solid #1d2946;
+      padding:7px 12px;
+      border-radius:999px;
+      cursor:pointer
     }
-
-    .logo-wrapper {
-      width: 88px;
-      height: 88px;
-      border-radius: 24px;
-      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12), transparent 55%);
-      border: 1px solid rgba(255,255,255,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      overflow: hidden;
+    .lang button[aria-pressed="true"]{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
     }
-
-    .logo-wrapper img {
-      max-width: 70%;
-      height: auto;
-      display: block;
+    .card{
+      background:var(--card);
+      border:1px solid #1d2946;
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow)
     }
-
-    .title-block h1 {
-      margin: 0 0 4px;
-      font-size: 1.9rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .hero h1{
+      margin:0 0 8px;
+      font-size:44px;
+      letter-spacing:.4px
     }
-
-    .title-block p {
-      margin: 0;
-      color: var(--text-muted);
-      font-size: 0.97rem;
-      max-width: 520px;
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:18px 0 6px
     }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.16);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      color: var(--text-muted);
-      margin-top: 6px;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#122143;
+      color:#fff;
+      border:1px solid #21325b;
+      padding:11px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      text-decoration:none;
+      font-size:14px
     }
-
-    .pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
+    .btn.primary{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 22px;
-      margin-bottom: 22px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px
     }
-
-    .section-title {
-      font-size: 0.86rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .chip{
+      display:inline-block;
+      background:var(--chip);
+      border:1px solid #1d2946;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:13px;
+      color:#c1ccec
     }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
+    .list{
+      display:grid;
+      gap:10px;
+      margin:8px 0
     }
-
-    p {
-      margin: 0 0 10px;
-      line-height: 1.6;
-      font-size: 0.95rem;
+    .muted{color:var(--muted)}
+    .foot{opacity:.8;font-size:13px;margin-top:24px}
+    img.logo{
+      max-width:260px;
+      height:auto;
+      display:block;
+      margin:10px 0 10px;
+      opacity:.97;
+      border-radius:14px
     }
-
-    ul {
-      margin: 0 0 10px 1.1rem;
-      padding: 0;
-      font-size: 0.94rem;
-      line-height: 1.6;
+    @media (max-width:860px){
+      .col-6{grid-column:span 12}
+      .hero h1{font-size:34px}
     }
-
-    li + li {
-      margin-top: 4px;
-    }
-
-    .pillars {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    .pillar {
-      border-radius: 14px;
-      padding: 10px 11px;
-      background: rgba(4, 19, 34, 0.85);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .pillar h3 {
-      margin: 0 0 4px;
-      font-size: 0.9rem;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent);
-    }
-
-    .pillar p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      padding-top: 14px;
-      margin-top: 10px;
-      border-top: 1px dashed rgba(255,255,255,0.12);
-    }
-
-    .cta-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: radial-gradient(circle at 0 0, rgba(255,255,255,0.15), rgba(0,0,0,0.1));
-      color: #f6fbff;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
-    }
-
-    .cta-primary span {
-      margin-left: 7px;
-      font-size: 0.9rem;
-    }
-
-    .cta-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-    }
-
-    .cta-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      max-width: 460px;
-    }
-
-    .disclaimer {
-      margin-top: 18px;
-      padding: 10px 11px;
-      border-radius: 14px;
-      border: 1px solid rgba(245, 183, 177, 0.4);
-      background: rgba(40, 7, 7, 0.7);
-      color: var(--danger);
-      font-size: 0.8rem;
-      line-height: 1.5;
-    }
-
-    .footer {
-      margin-top: 10px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 780px) {
-      .card {
-        padding: 24px 18px 20px;
-        border-radius: 18px;
-      }
-      .header {
-        flex-direction: row;
-        align-items: center;
-      }
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
+    .ico{width:16px;height:16px;display:inline-block;vertical-align:middle}
   </style>
 </head>
 <body>
-  <div class="page">
-    <main class="card">
-      <header class="header">
-        <div class="logo-wrapper" aria-hidden="true">
-          <img src="/logo-modelsovereignty.png" alt="Model Sovereignty logo" loading="lazy" />
-        </div>
-        <div class="title-block">
-          <div class="pill">
-            <span class="pill-dot"></span>
-            <span>Strategic Digital Asset · AI Sovereignty</span>
-          </div>
-          <h1>Model Sovereignty</h1>
-          <p>
-            A neutral, category-defining banner for the emerging concept of model sovereignty:
-            who controls the weights, the inference and the alignment of foundational AI models.
-          </p>
-        </div>
-      </header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge">Actif numérique stratégique disponible à l’acquisition</div>
+      <div class="lang">
+        <button id="btn-fr" aria-pressed="true">FR</button>
+        <button id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
 
-      <section class="grid" aria-label="Context and strategic pillars">
-        <div>
-          <div class="section-title">Concept &amp; context</div>
-          <h2>Defining the borders of AI in a fragmented world.</h2>
-          <p>
-            <strong>Model sovereignty</strong> refers to the strategic capacity of a nation,
-            institution or industrial coalition to design, train, deploy and align its
-            foundational AI models under its own jurisdiction &mdash; rather than depending
-            entirely on foreign platforms.
-          </p>
-          <p>
-            In the 2025–2035 horizon, the question is no longer only
-            <em>“Where is my cloud?”</em> but
-            <em>“Who really controls my models, their behaviour and their failure modes?”</em>
-          </p>
-          <p>
-            <strong>ModelSovereignty.com</strong> is an independent digital asset positioned
-            as a potential banner for initiatives in:
-          </p>
-          <ul>
-            <li>sovereign LLM and AI strategy,</li>
-            <li>defence, aerospace and critical infrastructure,</li>
-            <li>AI governance, red-teaming and model risk management.</li>
-          </ul>
-        </div>
+    <!-- ================= HERO FR ================= -->
+    <section class="card hero" data-fr>
+      <h1>ModelSovereignty.com</h1>
+      <img class="logo" src="/logo-modelsovereignty.png" alt="ModelSovereignty.com" loading="eager">
+      <p class="muted">
+        Nom de domaine <b>descriptif</b> pour la notion de <b>« model sovereignty »</b> :
+        la capacité d’un État, d’un groupe industriel ou d’un consortium à garder sous sa propre juridiction
+        les <b>weights</b>, les pipelines d’entraînement et d’inférence, et l’alignement de ses modèles d’IA.<br>
+        Conçu comme <b>bannière neutre</b> pour les cadres “Sovereign LLM”, les coalitions public–privé
+        et les observatoires dédiés à la souveraineté des modèles.<br>
+        <b>Offres sérieuses uniquement (institutions publiques, groupes stratégiques, fonds souverains, alliances industrielles).</b>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:contact@modelsovereignty.com?subject=ModelSovereignty.com%20-%20NDA%20%2F%20Proposition&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaite%20obtenir%20votre%20NDA%20et%2Fou%20proposer%20une%20offre%20pour%20ModelSovereignty.com.%0D%0AOrganisation%20%3A%20%0D%0ANom%20%2F%20Fonction%20%3A%20%0D%0AUsage%20strat%C3%A9gique%20envisag%C3%A9%20%3A%20%0D%0ABudget%20indicatif%20%3A%20%0D%0A%0D%0ACordialement%2C">
+          Proposer une offre / Demander un NDA
+        </a>
+        <a class="btn" href="#value-fr">Pourquoi ce nom ?</a>
+        <a class="btn" href="https://www.linkedin.com/company/modelsovereignty" target="_blank" rel="noopener" aria-label="Ouvrir la page LinkedIn ModelSovereignty">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.85 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.13V23h-4v-6.5c0-1.55-.03-3.54-2.16-3.54-2.16 0-2.49 1.68-2.49 3.43V23h-4V8.5z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+      <p class="muted" style="margin-top:8px">
+        <b>Nota :</b> ModelSovereignty.com est un <b>actif sémantique descriptif</b>.
+        Il ne constitue ni une agence gouvernementale, ni un régulateur, ni une autorité de défense.
+        Aucune recommandation juridique, géopolitique, de sécurité nationale ou de politique publique n’est fournie.
+        <b>Pas de conseil juridique, de défense ou de cybersécurité.</b>
+      </p>
+    </section>
 
-        <aside>
-          <div class="section-title">Three strategic pillars</div>
-          <div class="pillars">
-            <div class="pillar">
-              <h3>Jurisdictional control</h3>
-              <p>
-                Where do the model weights reside? Under which laws? Who can compel
-                access to them in a crisis or dispute?
-              </p>
-            </div>
-            <div class="pillar">
-              <h3>Inference security</h3>
-              <p>
-                Who holds the encryption keys and controls inference pipelines, telemetry
-                and resilience under adverse conditions?
-              </p>
-            </div>
-            <div class="pillar">
-              <h3>Alignment autonomy</h3>
-              <p>
-                Who defines the norms, refusal policies and guardrails that govern what
-                the model will and will not do?
-              </p>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section aria-label="About the asset">
-        <div class="section-title">About the asset</div>
-        <p>
-          ModelSovereignty.com is not a government agency, regulator, law firm or cloud provider.
-          It is a <strong>strategic naming asset</strong> that could be integrated into a
-          sovereign AI initiative, an industrial alliance or an independent observatory,
-          at the discretion and under the sole responsibility of its future owner.
-        </p>
-        <p>
-          Any potential transfer would concern the <strong>domain name only</strong>. No policy
-          mandate, legal authority, advisory service or technical infrastructure is included.
-        </p>
-
-        <div class="cta-row">
-          <a class="cta-primary" href="mailto:contact@modelsovereignty.com?subject=ModelSovereignty.com%20-%20Acquisition%20inquiry">
-            Contact regarding asset acquisition
-            <span>↗</span>
-          </a>
-          <div class="cta-meta">
-            Professional and institutional inquiries only.
-            No pricing is provided on first contact; please outline your organisation
-            and intended strategic use case.
+    <!-- ================= VALUE FR ================= -->
+    <section id="value-fr" class="card" style="margin-top:16px" data-fr>
+      <div class="grid">
+        <div class="col-6">
+          <h3>Pourquoi ModelSovereignty.com a de la valeur</h3>
+          <div class="list">
+            <div class="chip">Cadre « model sovereignty » lisible au niveau exécutif et parlementaire</div>
+            <div class="chip">Nom de catégorie neutre pour programmes “Sovereign LLM” et alliances IA souveraine</div>
+            <div class="chip">Narratif durable au-dessus des clouds, fournisseurs et générations de modèles</div>
+            <div class="chip">.com global exact-match — actif défensif si le concept se généralise dans les politiques publiques</div>
           </div>
         </div>
+        <div class="col-6">
+          <h3>Exemples de cas d’usage</h3>
+          <div class="list">
+            <div class="chip">Programme national ou européen “Model Sovereignty Framework” (cadre public)</div>
+            <div class="chip">Alliance industrielle cloud / télécoms / défense / IA sous bannière neutre</div>
+            <div class="chip">Observatoire ou think tank dédié aux risques de juridiction et d’alignement des modèles</div>
+            <div class="chip">Hub de gouvernance des modèles pour grands groupes exposés à l’IA générative</div>
+          </div>
+        </div>
+      </div>
+      <p class="muted">
+        Ce site ne vend <b>aucun service de conseil, d’intégration, de cloud ou de défense</b> :
+        uniquement le nom de domaine <b>ModelSovereignty.com</b>, en tant qu’actif numérique descriptif.
+        L’acquéreur reste seul responsable de ses usages, contenus, politiques publiques ou cadres de gouvernance.
+      </p>
+    </section>
 
-        <div class="disclaimer">
-          <strong>Disclaimer.</strong>
-          ModelSovereignty.com is an independent digital asset and concept.
-          It is not affiliated with any government, State agency, regulator, international
-          organisation or defence structure, and does not provide legal, regulatory, tax,
-          defence or national security advice. The term “model sovereignty” is used as a
-          descriptive concept only. No guarantee of valuation, transaction or outcome is given.
-        </div>
-      </section>
+    <!-- ================= ACQUISITION FR ================= -->
+    <section class="card" style="margin-top:16px" data-fr>
+      <h3>Acquisition (process sécurisé)</h3>
+      <p class="muted">
+        Process type : NDA &rarr; échanges stratégiques &rarr; offre formelle &rarr; escrow &rarr; transfert du domaine.
+        L’actif cédé est exclusivement le nom de domaine ModelSovereignty.com, sans mandat institutionnel,
+        sans prestations de conseil juridique, de défense ou de cybersécurité.
+      </p>
+      <a class="btn primary" href="mailto:contact@modelsovereignty.com?subject=ModelSovereignty.com%20-%20NDA%20%2F%20Proposition">
+        Contact direct : contact@modelsovereignty.com
+      </a>
+    </section>
 
-      <footer class="footer">
-        <div>
-          © <span id="year"></span> ModelSovereignty.com · Independent strategic digital asset.
+    <!-- ================= DOCS FR ================= -->
+    <section class="card" style="margin-top:16px" data-fr>
+      <h3>Documents / Briefs</h3>
+      <p class="muted">
+        Brief d’acquisition détaillé (2025-11) disponible en français et en anglais
+        pour les équipes Gouvernement, Stratégie, Défense, Cloud & IA, M&A et Fonds souverains.
+      </p>
+      <div class="cta">
+        <a class="btn" href="/Acquisition%20Brief%20modelsovereignty-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Ouvrir le Brief (FR)
+        </a>
+        <a class="btn primary" href="/Acquisition%20Brief%20modelsovereignty-202511.pdf" download="Acquisition-Brief-ModelSovereignty-FR-202511.pdf" type="application/pdf">
+          📥 Télécharger (FR, PDF)
+        </a>
+        <a class="btn" href="/Acquisition%20Brief%20modelsovereignty-EN-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Open Brief (EN)
+        </a>
+        <a class="btn primary" href="/Acquisition%20Brief%20modelsovereignty-EN-202511.pdf" download="Acquisition-Brief-ModelSovereignty-EN-202511.pdf" type="application/pdf">
+          📥 Download (EN, PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= HERO EN ================= -->
+    <section class="card hero" data-en hidden>
+      <h1>ModelSovereignty.com</h1>
+      <img class="logo" src="/logo-modelsovereignty.png" alt="ModelSovereignty.com" loading="eager">
+      <p class="muted">
+        <b>Descriptive .com domain</b> for the emerging concept of <b>“model sovereignty”</b>:
+        the capacity of a state, industrial group or consortium to keep under its own jurisdiction
+        the <b>weights</b>, training and inference pipelines, and alignment of its AI models.<br>
+        Designed as a <b>neutral banner</b> for Sovereign LLM frameworks, public–private alliances
+        and observatories dedicated to AI model governance.<br>
+        <b>Serious inquiries only (governments, strategic corporates, sovereign / strategic funds, industrial alliances).</b>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:contact@modelsovereignty.com?subject=ModelSovereignty.com%20-%20NDA%20%2F%20Offer&body=Hello%2C%0D%0A%0D%0AI%27d%20like%20to%20request%20your%20NDA%20and%2For%20submit%20an%20offer%20for%20ModelSovereignty.com.%0D%0AOrganisation%3A%20%0D%0AName%20%2F%20Role%3A%20%0D%0AIntended%20strategic%20use%3A%20%0D%0ABudget%20range%3A%20%0D%0ABest%2C">
+          Submit an offer / Request NDA
+        </a>
+        <a class="btn" href="#value-en">Why this name?</a>
+        <a class="btn" href="https://www.linkedin.com/company/modelsovereignty" target="_blank" rel="noopener" aria-label="Open ModelSovereignty on LinkedIn">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.85 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.13V23h-4v-6.5c0-1.55-.03-3.54-2.16-3.54-2.16 0-2.49 1.68-2.49 3.43V23h-4V8.5z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+      <p class="muted" style="margin-top:8px">
+        <b>Note:</b> ModelSovereignty.com is a <b>descriptive digital asset</b>.
+        It is not a government agency, not a regulator and not a defence or intelligence body.
+        No legal, geopolitical, defence or cybersecurity advice is provided, and no sovereign guarantees are implied.
+        <b>No legal, defence or security advice.</b>
+      </p>
+    </section>
+
+    <!-- ================= VALUE EN ================= -->
+    <section id="value-en" class="card" style="margin-top:16px" data-en hidden>
+      <div class="grid">
+        <div class="col-6">
+          <h3>Why ModelSovereignty.com is valuable</h3>
+          <div class="list">
+            <div class="chip">“Model sovereignty” frame readable at cabinet, board and regulator level</div>
+            <div class="chip">Neutral category name for Sovereign LLM programmes and AI sovereignty alliances</div>
+            <div class="chip">Long-lived narrative above clouds, vendors and successive model generations</div>
+            <div class="chip">Exact-match global .com — defensive asset if the concept spreads in AI policies</div>
+          </div>
         </div>
-        <div>
-          Contact: <a href="mailto:contact@modelsovereignty.com">contact@modelsovereignty.com</a>
+        <div class="col-6">
+          <h3>Example use cases</h3>
+          <div class="list">
+            <div class="chip">National or regional “Model Sovereignty Framework” (public policy programme)</div>
+            <div class="chip">Industrial alliance (cloud, telecom, defence, AI) under a neutral banner</div>
+            <div class="chip">Think tank or observatory on jurisdictional, security and alignment risks in AI</div>
+            <div class="chip">Model governance hub for large corporates exposed to foundation models</div>
+          </div>
         </div>
-      </footer>
-    </main>
+      </div>
+      <p class="muted">
+        This site does <b>not</b> sell consulting, cloud, defence or cybersecurity services:
+        only the <b>ModelSovereignty.com</b> domain name as a descriptive digital asset.
+        The buyer remains solely responsible for its uses, content, policies and governance frameworks.
+      </p>
+    </section>
+
+    <!-- ================= ACQUISITION EN ================= -->
+    <section class="card" style="margin-top:16px" data-en hidden>
+      <h3>Acquisition (secure process)</h3>
+      <p class="muted">
+        Typical flow: NDA &rarr; strategic discussions &rarr; formal offer &rarr; escrow &rarr; domain transfer.
+        The only asset transferred is the ModelSovereignty.com domain name, with no public mandate and
+        no legal, defence or cybersecurity advisory services attached.
+      </p>
+      <a class="btn primary" href="mailto:contact@modelsovereignty.com?subject=ModelSovereignty.com%20-%20NDA%20%2F%20Offer">
+        Direct contact: contact@modelsovereignty.com
+      </a>
+    </section>
+
+    <!-- ================= DOCS EN ================= -->
+    <section class="card" style="margin-top:16px" data-en hidden>
+      <h3>Documents / Briefs</h3>
+      <p class="muted">
+        Detailed acquisition brief (2025-11) available in English and French
+        for Government, Strategy, Defence, Cloud & AI, M&A and Sovereign Fund teams.
+      </p>
+      <div class="cta">
+        <a class="btn" href="/Acquisition%20Brief%20modelsovereignty-EN-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Open Brief (EN)
+        </a>
+        <a class="btn primary" href="/Acquisition%20Brief%20modelsovereignty-EN-202511.pdf" download="Acquisition-Brief-ModelSovereignty-EN-202511.pdf" type="application/pdf">
+          📥 Download (EN, PDF)
+        </a>
+        <a class="btn" href="/Acquisition%20Brief%20modelsovereignty-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Ouvrir le Brief (FR)
+        </a>
+        <a class="btn primary" href="/Acquisition%20Brief%20modelsovereignty-202511.pdf" download="Acquisition-Brief-ModelSovereignty-FR-202511.pdf" type="application/pdf">
+          📥 Télécharger (FR, PDF)
+        </a>
+      </div>
+    </section>
+
+    <p class="foot muted">
+      © ModelSovereignty.com — actif numérique descriptif « souveraineté des modèles d’IA ». Aucune affiliation avec des gouvernements,
+      agences, alliances de défense, organisations internationales ou autorités de régulation. Usage descriptif uniquement.
+      Pas de conseil juridique, politique, sécuritaire ou réglementaire. — Contact : <a href="mailto:contact@modelsovereignty.com">contact@modelsovereignty.com</a>
+    </p>
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const frBtn = document.getElementById('btn-fr');
+    const enBtn = document.getElementById('btn-en');
+    const show = (lang) => {
+      document.querySelectorAll('[data-fr]').forEach(n => n.hidden = (lang !== 'fr'));
+      document.querySelectorAll('[data-en]').forEach(n => n.hidden = (lang !== 'en'));
+      frBtn.setAttribute('aria-pressed', String(lang === 'fr'));
+      enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+      document.documentElement.lang = lang;
+    };
+    frBtn.addEventListener('click', () => show('fr'));
+    enBtn.addEventListener('click', () => show('en'));
+    show('fr');
   </script>
 </body>
 </html>
