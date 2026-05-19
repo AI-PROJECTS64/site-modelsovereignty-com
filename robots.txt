@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Static informational site for the ModelSovereignty.com digital asset.
-# No specific crawling restrictions.
+Sitemap: https://www.modelsovereignty.com/sitemap.xml
